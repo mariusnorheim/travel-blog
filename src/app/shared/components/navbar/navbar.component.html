@@ -1,0 +1,20 @@
+<mat-toolbar color="primary">
+    <!-- Left side with links -->
+    <div class="nav-left">
+        <img src="path-to-logo.png" alt="Logo" class="logo" />
+        <a mat-button (click)="navigateTo('/blog')">Blog</a>
+        <a mat-button (click)="navigateTo('/gallery')">Gallery</a>
+        <a mat-button (click)="navigateTo('/destinations')">Destinations</a>
+        <a mat-icon-button (click)="openInstagram()">
+            <mat-icon>camera</mat-icon>
+        </a>
+    </div>
+
+    <!-- Right side with search and admin login -->
+    <div class="nav-right">
+        <mat-form-field appearance="fill">
+            <input matInput placeholder="Search" />
+        </mat-form-field>
+        <a mat-button (click)="navigateTo('/admin')">Admin Login</a>
+    </div>
+</mat-toolbar>

@@ -1,0 +1,48 @@
+mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px; /* Adjust size as needed */
+    margin-right: 20px;
+}
+
+a {
+    margin: 0 10px;
+    color: inherit; /* Keeps the link color consistent */
+    text-decoration: none; /* Removes underline from links */
+}
+
+/* Style for the search bar */
+mat-form-field {
+    width: 200px; /* Adjust width as needed */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .nav-left,
+    .nav-right {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    a {
+        margin: 5px 0;
+    }
+
+    mat-form-field {
+        width: 100%;
+    }
+}
