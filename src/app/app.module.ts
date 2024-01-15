@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { BlogService } from './blog/blog.service';
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+import { BlogService } from './blog/blog.service';
 // ... other core services
 
 @NgModule({
-    imports: [CommonModule, AppComponent],
+    imports: [CommonModule, AppRoutingModule, AppComponent],
     declarations: [],
     providers: [
-        BlogService,
+        //BlogService,
         // ... other services
     ],
     bootstrap: [],

@@ -5,16 +5,18 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 @Component({
     standalone: true,
-    selector: 'app-navbar',
+    selector: 'navbar',
     imports: [
         MatButtonModule,
         MatExpansionModule,
         MatFormFieldModule,
         MatIconModule,
+        MatInputModule,
         MatToolbarModule,
     ],
     templateUrl: './navbar.component.html',

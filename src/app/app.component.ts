@@ -1,21 +1,31 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './features/navbar/navbar.component';
+import { BlogModule } from './blog/blog.module';
 import { BlogPost } from './models/blog/blog-post.model';
+//import { BlogService } from './blog/blog.service';
 
 @Component({
-    selector: 'app-root',
+    selector: 'travel-blog',
     standalone: true,
-    imports: [CommonModule, RouterOutlet, NavbarComponent],
+    imports: [CommonModule, RouterOutlet, BlogModule, NavbarComponent],
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
 })
 export class AppComponent {
-    // blogPosts = [
-    //   new BlogPost(1, "Testing", "Testing blog posts."),
-    //   new BlogPost(2, "Hello, world!", "Hiya there!"),
-    //   new BlogPost(3, "title", "text"),
-    // ]
-    title = 'mariusinbloom.wtf - My travel adventures!';
+    // items!: BlogPost[];
+
+    // constructor(private blogService: BlogService) {}
+
+    // ngOnInit(): void {
+    //     this.blogService.getPosts().subscribe(
+    //         (data: any) => {
+    //             this.items = data;
+    //         },
+    //         (error: any) => {
+    //             alert(error.message);
+    //         }
+    //     )
+    // }
 }

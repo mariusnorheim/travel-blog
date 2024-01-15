@@ -4,5 +4,5 @@ export interface BlogPost {
     title: string;
     text: string;
     date: Date | string; // can be either Date object or ISO string
-    image: string;
+    image?: string;
   }
