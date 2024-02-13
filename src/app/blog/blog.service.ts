@@ -51,7 +51,19 @@ export class BlogService {
         return of(this.blogPosts);
     }
 
-    // addPost(post: BlogPost) {
+    // getPost(id: number): BlogPost {
+    //     let options = this.getStandardOptions();
+    //     options.params = new HttpParams({
+    //         fromObject: {
+    //             id: id // Equals to "url?id=1"
+    //         }
+    //     });
+
+    //     return
+    //     //return this.http.get('url', options)
+    // }
+
+    // createPost(post: BlogPost) {
     //     let options = this.getStandardOptions();
     //     options.headers = options.headers.set(
     //         'Authorization',
