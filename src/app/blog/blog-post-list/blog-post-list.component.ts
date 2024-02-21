@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { BlogPost } from '../../models/blog/blog-post.model';
 import { BlogService } from '../blog.service';
 
+import { CardModule } from 'primeng/card';
+
 @Component({
     selector: 'blog-post-list',
     templateUrl: './blog-post-list.component.html',

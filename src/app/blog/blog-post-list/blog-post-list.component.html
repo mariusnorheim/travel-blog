@@ -1,19 +1,15 @@
-<mat-card *ngFor="let post of blogPosts" class="blog-post-card">
-    <mat-card-header>
-        <mat-card-title>{{ post.title }}</mat-card-title>
-        <mat-card-subtitle>{{ post.date | date }}</mat-card-subtitle>
-    </mat-card-header>
-    <img
-        mat-card-image
-        *ngIf="post.image"
-        [src]="post.image"
-        alt="{{ post.title }}"
-    />
-    <mat-card-content>
-        <p>{{ post.text | slice: 0 : 100 }}...</p>
-        <!-- Display a snippet of the text -->
-    </mat-card-content>
-    <mat-card-actions>
-        <button mat-button [routerLink]="['/blog', post.id]">READ MORE</button>
-    </mat-card-actions>
-</mat-card>
+<div class="card flex justify-content-center">
+    <p-card header="Advanced Card" subheader="Card Subheader" [style]="{ width: '360px' }" *ngFor="let post of blogPosts">
+        <ng-template pTemplate="header">
+            <img alt="Card" src="https://primefaces.org/cdn/primeng/images/usercard.png" />
+        </ng-template>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque
+            quas!
+        </p>
+        <ng-template pTemplate="footer">
+            <p-button label="Save" icon="pi pi-check"></p-button>
+            <p-button label="Cancel" icon="pi pi-times" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>
+        </ng-template>
+    </p-card>
+</div>
