@@ -3,22 +3,52 @@ import { Router } from '@angular/router';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AvatarModule } from 'primeng/avatar';
-import { ToolbarModule } from 'primeng/toolbar';
 import { ButtonModule } from 'primeng/button';
+import { DockModule } from 'primeng/dock';
+import { ToolbarModule } from 'primeng/toolbar';
+import { MenuItem } from 'primeng/api';
 
 @Component({
     standalone: true,
     selector: 'navbar',
     imports: [
         AvatarModule,
-        ToolbarModule,
         ButtonModule,
+        DockModule,
+        ToolbarModule,
     ],
     templateUrl: './navbar.component.html',
     styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent {
+    items: MenuItem[] | undefined;
+
     constructor(private router: Router) {}
+
+    ngOnInit() {
+        this.items = [
+            {
+                label: 'Blog',
+                icon: 'https://primefaces.org/cdn/primeng/images/dock/finder.svg',
+                url: '/blog'
+            },
+            {
+                label: 'Gallery',
+                icon: 'https://primefaces.org/cdn/primeng/images/dock/appstore.svg',
+                url: '/gallery'
+            },
+            {
+                label: 'Destinations',
+                icon: 'https://primefaces.org/cdn/primeng/images/dock/photos.svg',
+                url: '/destinations'
+            },
+            {
+                label: 'Instagram',
+                icon: 'https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg',
+                url: 'https://www.instagram.com/mariusinbloom',
+            }
+        ];
+    }
 
     navigateTo(link: string): void {
         // Use Angular's Router to navigate
