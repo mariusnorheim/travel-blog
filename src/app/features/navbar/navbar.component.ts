@@ -30,22 +30,26 @@ export class NavbarComponent {
             {
                 label: 'Blog',
                 icon: 'https://primefaces.org/cdn/primeng/images/dock/finder.svg',
-                url: '/blog'
+                url: '/blog',
+                external: false
             },
             {
                 label: 'Gallery',
                 icon: 'https://primefaces.org/cdn/primeng/images/dock/appstore.svg',
-                url: '/gallery'
+                url: '/gallery',
+                external: false
             },
             {
                 label: 'Destinations',
                 icon: 'https://primefaces.org/cdn/primeng/images/dock/photos.svg',
-                url: '/destinations'
+                url: '/destinations',
+                external: false
             },
             {
                 label: 'Instagram',
                 icon: 'https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg',
                 url: 'https://www.instagram.com/mariusinbloom',
+                external: true
             }
         ];
     }
