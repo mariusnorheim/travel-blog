@@ -1,6 +1,7 @@
 <p-toolbar styleClass="navbar">
     <ng-template pTemplate="start">
         <img src="https://primefaces.org/cdn/primeng/images/primeng.svg" />
+        <h1> mariusinbloom.wtf</h1>
     </ng-template>
     <ng-template pTemplate="center">
         <div class="flex flex-wrap align-items-center gap-3">
@@ -14,9 +15,11 @@
         </div>
     </ng-template>
     <ng-template pTemplate="end">
-        <div class="flex align-items-center gap-2">
-            <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png" shape="circle" />
-            <span class="font-bold text-bluegray-50">Amy Elsner</span>
+        <div class="p-inputgroup">
+            <input type="text" pInputText placeholder="Search">
+            <span class="p-inputgroup-addon">
+                <i class="pi pi-search"></i>
+            </span>
         </div>
     </ng-template>
 </p-toolbar>

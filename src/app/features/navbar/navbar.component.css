@@ -1,0 +1,9 @@
+@import url('https://fonts.cdnfonts.com/css/vegan-style-personal-use');
+
+h1 {
+    color: var(--purple-800);
+    font-family: 'Vegan Style Personal Use', sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-left: 0.5rem;
+}

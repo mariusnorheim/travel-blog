@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AvatarModule } from 'primeng/avatar';
 import { ButtonModule } from 'primeng/button';
 import { DockModule } from 'primeng/dock';
+import { InputTextModule } from 'primeng/inputtext';
 import { ToolbarModule } from 'primeng/toolbar';
 import { MenuItem } from 'primeng/api';
 
@@ -15,6 +16,7 @@ import { MenuItem } from 'primeng/api';
         AvatarModule,
         ButtonModule,
         DockModule,
+        InputTextModule,
         ToolbarModule,
     ],
     templateUrl: './navbar.component.html',
