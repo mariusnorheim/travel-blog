@@ -26,6 +26,7 @@ p-dock .pi {
 
 a .pi {
     color: var(--teal-400);
+    text-shadow: 1px 1px var(--gray-600);
 }
 
 a:hover .pi {

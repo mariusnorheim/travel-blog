@@ -33,8 +33,8 @@ export class NavbarComponent {
         this.items = [
             {
                 label: 'Blog',
-                icon: 'pi pi-fw pi-home',
-                url: '/blog',
+                icon: 'pi pi-fw pi-book',
+                url: '/',
                 external: false
             },
             {
