@@ -14,7 +14,6 @@ export class BlogPostDetailsComponent implements OnInit {
     postId!: number;
     items: { label?: string; icon?: string; separator?: boolean }[] = [];
 
-
     constructor(private route: ActivatedRoute) {}
 
     ngOnInit(): void {

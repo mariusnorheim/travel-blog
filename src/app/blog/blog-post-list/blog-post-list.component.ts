@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BlogPost } from '../../models/blog/blog-post.model';
+import { BlogPost } from '../../models/blog-post.model';
 import { BlogService } from '../blog.service';
 
 import { CardModule } from 'primeng/card';

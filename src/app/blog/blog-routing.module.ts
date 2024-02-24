@@ -5,7 +5,7 @@ import { BlogPostDetailsComponent } from './blog-post-details/blog-post-details.
 
 const routes: Routes = [
     { path: '', component: BlogPostListComponent }, // Route for blog post list
-    { path: ':id', component: BlogPostDetailsComponent }, // Route for blog post details
+    { path: 'blog/:id', component: BlogPostDetailsComponent }, // Route for blog post details
 ];
 
 @NgModule({
