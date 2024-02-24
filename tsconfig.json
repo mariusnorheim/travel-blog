@@ -25,7 +25,10 @@
     ],
     "baseUrl": "./",
     "paths": {
-      "@assets/*": ["src/assets/*"]
+      "@assets/*": ["src/assets/*"],
+      "@models/*": ["src/app/models/*"],
+      "@blog/*": ["src/app/blog/*"],
+      "@gallery/*": ["src/app/gallery/*"],
     }
   },
   "angularCompilerOptions": {
