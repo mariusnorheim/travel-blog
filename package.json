@@ -1,10 +1,10 @@
 {
-  "name": "travel-blog-angular",
-  "version": "0.0.0",
+  "name": "travel-blog",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --configuration production --base-href https://marius.github.io/travel-blog/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
