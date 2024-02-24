@@ -2,7 +2,7 @@
 export interface BlogPost {
     id: number;
     title: string;
-    text: string;
-    date: Date | string; // can be either Date object or ISO string
+    content: string;
+    date: Date | string;
     image?: string;
   }

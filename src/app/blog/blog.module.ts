@@ -9,16 +9,18 @@ import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { MenuModule } from 'primeng/menu';
 import { PanelModule } from 'primeng/panel';
+import { PaginatorModule } from 'primeng/paginator';
 
 @NgModule({
     declarations: [BlogPostDetailsComponent, BlogPostListComponent],
     imports: [
+        CommonModule,
+        BlogRoutingModule,
         ButtonModule,
         CardModule,
         MenuModule,
         PanelModule,
-        CommonModule,
-        BlogRoutingModule,
+        PaginatorModule,
     ],
     providers: [BlogService],
     exports: [BlogPostDetailsComponent, BlogPostListComponent],

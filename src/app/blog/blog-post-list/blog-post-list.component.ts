@@ -3,6 +3,7 @@ import { BlogPost } from '../../models/blog/blog-post.model';
 import { BlogService } from '../blog.service';
 
 import { CardModule } from 'primeng/card';
+import { PaginatorState } from 'primeng/paginator';
 
 @Component({
     selector: 'blog-post-list',
@@ -11,19 +12,28 @@ import { CardModule } from 'primeng/card';
 })
 export class BlogPostListComponent implements OnInit {
     blogPosts: BlogPost[] = [];
+    first: number = 0;
+    rows: number = 4;
+    totalPosts: number = 2;
 
     constructor(private blogService: BlogService) {}
 
     ngOnInit(): void {
         this.loadBlogPosts();
+        // this.totalPosts = this.blogPosts.length || 0;
+        console.log(this.totalPosts);
+        this.first = 0;
+        this.rows = 4;
     }
 
     private loadBlogPosts(): void {
-        // Assuming getPosts() returns an Observable<BlogPost[]>
         this.blogService.getPosts().subscribe((posts) => {
             this.blogPosts = posts;
         });
     }
 
-    // Add other component methods as needed
+    onPageChange(event: PaginatorState) {
+        this.first = event.first ?? 0;
+        this.rows = event.rows ?? 4;
+    }
 }

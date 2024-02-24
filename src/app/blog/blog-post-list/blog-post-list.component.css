@@ -1,51 +1,22 @@
-/* Styles for Material Cards */
-.blog-post-card {
-    margin-bottom: 20px;
-    border: 1px solid #eee;
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1em;
 }
 
-.responsive-card .mat-card-content {
-    border: 1px solid #eee;
-    width: 100%; /* Forces the content to take the full width of the card */
+/* Each card */
+.card-container p-card {
+    flex: 1 1 100%;
+    max-width: calc(50% - 1rem);
 }
 
-.responsive-card {
-    width: 100%; /* Makes the card take full width of the container */
-    max-width: 600px; /* Maximum width of the card */
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow for better visibility */
+.card:last-child {
+    margin-bottom: 1rem;
 }
 
-/* Styles for Stack Layout */
-.stack-layout .blog-post {
-    border-bottom: 1px solid #eee;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-/* Styles for Grid Layout */
-.grid-layout {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.grid-layout .blog-post {
-    border: 1px solid #eee;
-}
-
-.grid-layout .blog-post img {
-    width: 100%;
-    height: auto;
-}
-
-.grid-layout .post-content {
-    padding: 10px;
-}
-
-/* Responsive adjustments */
 @media (max-width: 768px) {
-    .responsive-card .mat-card-content {
-        width: 90%; /* Slightly smaller width on smaller screens */
+    .card-container p-card {
+        max-width: 100%; /* Full width on smaller screens */
     }
 }

@@ -1,11 +1,10 @@
-<div class="card flex justify-content-center">
-    <p-card header="Advanced Card" subheader="Card Subheader" [style]="{ width: '360px' }" *ngFor="let post of blogPosts">
+<div class="card-container">
+    <p-card class="card" [header]="post.title" *ngFor="let post of blogPosts">
         <ng-template pTemplate="header">
-            <img alt="Card" src="https://primefaces.org/cdn/primeng/images/usercard.png" />
+            <img [alt]="post.title" src="https://primefaces.org/cdn/primeng/images/usercard.png" />
         </ng-template>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque
-            quas!
+            {{ post.content }}
         </p>
         <ng-template pTemplate="footer">
             <p-button label="Save" icon="pi pi-check"></p-button>
@@ -13,3 +12,5 @@
         </ng-template>
     </p-card>
 </div>
+
+<p-paginator [first]="first" [rows]="4" [totalRecords]="totalPosts" (onPageChange)="onPageChange($event)"></p-paginator>
