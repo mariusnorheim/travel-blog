@@ -35,6 +35,6 @@ a:hover .pi {
     filter: drop-shadow(0 0 3px rgba(103, 150, 154, 0.75));
 }
 
-.active-item {
+.active-link {
     color: var(--cyan-400) !important;
 }

@@ -1,13 +1,40 @@
 <p-toolbar styleClass="navbar">
     <ng-template pTemplate="start">
         <img src="https://primefaces.org/cdn/primeng/images/primeng.svg" />
-        <h1> mariusinbloom.wtf</h1>
+        <h1>mariusinbloom.wtf</h1>
     </ng-template>
     <ng-template pTemplate="center">
         <div class="flex flex-wrap align-items-center gap-3">
             <p-dock [model]="items" position="top">
                 <ng-template pTemplate="item" let-item>
-                    <a [href]="item.url" title="{{ item.label }}" [attr.target]="item.external ? '_blank' : null">
+                    <a
+                        *ngIf="item.homelink && !item.external"
+                        [routerLink]="item.url"
+                        title="{{ item.label }}"
+                    >
+                        <i
+                            [class.active-link]="isActiveHomeLink"
+                            class="pi"
+                            [ngClass]="'pi-' + item.icon"
+                        ></i>
+                    </a>
+                    <a
+                        *ngIf="!item.homelink && !item.external"
+                        [routerLink]="item.url"
+                        title="{{ item.label }}"
+                    >
+                        <i
+                            routerLinkActive="active-link" 
+                            class="pi"
+                            [ngClass]="'pi-' + item.icon"
+                        ></i>
+                    </a>
+                    <a
+                        *ngIf="item.external"
+                        [href]="item.url"
+                        title="{{ item.label }}"
+                        target="_blank"
+                    >
                         <i class="pi" [ngClass]="'pi-' + item.icon"></i>
                     </a>
                 </ng-template>
@@ -16,7 +43,7 @@
     </ng-template>
     <ng-template pTemplate="end">
         <div class="p-inputgroup">
-            <input type="text" pInputText placeholder="Search">
+            <input type="text" pInputText placeholder="Search" />
             <span class="p-inputgroup-addon">
                 <i class="pi pi-search"></i>
             </span>
