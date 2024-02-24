@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit  } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -6,8 +6,28 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './gallery-list.component.html',
   styleUrl: './gallery-list.component.css'
 })
-export class GalleryListComponent {
+export class GalleryListComponent implements OnInit {
+    items: { label?: string; icon?: string; separator?: boolean }[] = [];
 
-  constructor(private route: ActivatedRoute) {}
+    constructor(private route: ActivatedRoute) {}
 
+    ngOnInit(): void {
+        this.items = [
+            {
+                label: 'Refresh',
+                icon: 'pi pi-refresh'
+            },
+            {
+                label: 'Search',
+                icon: 'pi pi-search'
+            },
+            {
+                separator: true
+            },
+            {
+                label: 'Delete',
+                icon: 'pi pi-times'
+            }
+        ];
+    }
 }
