@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -13,6 +14,7 @@ import { MenuItem } from 'primeng/api';
     standalone: true,
     selector: 'navbar',
     imports: [
+        CommonModule,
         AvatarModule,
         ButtonModule,
         DockModule,
@@ -31,25 +33,25 @@ export class NavbarComponent {
         this.items = [
             {
                 label: 'Blog',
-                icon: 'https://primefaces.org/cdn/primeng/images/dock/finder.svg',
+                icon: 'pi pi-fw pi-home',
                 url: '/blog',
                 external: false
             },
             {
                 label: 'Gallery',
-                icon: 'https://primefaces.org/cdn/primeng/images/dock/appstore.svg',
+                icon: 'pi pi-fw pi-image',
                 url: '/gallery',
                 external: false
             },
             {
                 label: 'Destinations',
-                icon: 'https://primefaces.org/cdn/primeng/images/dock/photos.svg',
+                icon: 'pi pi-fw pi-globe',
                 url: '/destinations',
                 external: false
             },
             {
                 label: 'Instagram',
-                icon: 'https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg',
+                icon: 'pi pi-fw pi-instagram',
                 url: 'https://www.instagram.com/mariusinbloom',
                 external: true
             }
@@ -57,17 +59,6 @@ export class NavbarComponent {
     }
 
     navigateTo(link: string): void {
-        // Use Angular's Router to navigate
         this.router.navigate([link]);
     }
-
-    // Example method for opening the Instagram page
-    openInstagram(): void {
-        // Implement the logic to open the Instagram page
-        // For instance, you can use window.open() to open a new tab with the Instagram URL
-        const instagramUrl = 'https://www.instagram.com/mariusinbloom';
-        window.open(instagramUrl, '_blank');
-    }
-
-    // You can add more methods as needed, for example, for handling the login action
 }

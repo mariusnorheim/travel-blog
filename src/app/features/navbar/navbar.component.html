@@ -7,8 +7,8 @@
         <div class="flex flex-wrap align-items-center gap-3">
             <p-dock [model]="items" position="top">
                 <ng-template pTemplate="item" let-item>
-                    <a [href]="item.url" [attr.target]="item.external ? '_blank' : null">
-                        <img [src]="item.icon" [alt]="item.label" width="100%" />
+                    <a [href]="item.url" title="{{ item.label }}" [attr.target]="item.external ? '_blank' : null">
+                        <i class="pi" [ngClass]="'pi-' + item.icon"></i>
                     </a>
                 </ng-template>
             </p-dock>

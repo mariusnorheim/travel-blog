@@ -1,9 +1,39 @@
-@import url('https://fonts.cdnfonts.com/css/vegan-style-personal-use');
+@import url("https://fonts.cdnfonts.com/css/vegan-style-personal-use");
+@import "node_modules/primeng/resources/themes/mira/theme.css";
+@import "node_modules/primeng/resources/primeng.min.css";
+
+@keyframes rotate-icon {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
 
 h1 {
     color: var(--purple-800);
-    font-family: 'Vegan Style Personal Use', sans-serif;
+    font-family: "Vegan Style Personal Use", sans-serif;
     margin: 0;
     padding: 0;
     padding-left: 0.5rem;
+}
+
+p-dock .pi {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+a .pi {
+    color: var(--teal-400);
+}
+
+a:hover .pi {
+    animation: rotate-icon 0.7s ease forwards;
+    color: var(--orange-400);
+    filter: drop-shadow(0 0 3px rgba(103, 150, 154, 0.75));
+}
+
+.active-item {
+    color: var(--cyan-400) !important;
 }
