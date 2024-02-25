@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { GalleryRoutingModule } from './gallery-routing.module';
 import { GalleryService } from './gallery.service';
-import { GalleryListComponent } from './gallery-list/gallery-list.component';
+import { GalleryListComponent } from './components/gallery-list/gallery-list.component';
 import { ButtonModule } from 'primeng/button';
 import { MenuModule } from 'primeng/menu';
 import { PanelModule } from 'primeng/panel';
