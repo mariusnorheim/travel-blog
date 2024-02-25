@@ -35,7 +35,7 @@ a:hover .pi {
     filter: drop-shadow(0 0 3px rgba(207, 180, 82, 0.7));
 }
 
-.active-link {
+.active-link i {
     color: var(--teal-500) !important;
 }
 a:hover .active-link {

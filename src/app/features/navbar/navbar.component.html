@@ -7,36 +7,37 @@
         <div class="flex flex-wrap align-items-center gap-3">
             <p-dock [model]="items" position="top">
                 <ng-template pTemplate="item" let-item>
+                    <div [class.active-link]="isActiveHomeLink" *ngIf="item.homelink && !item.external">
+                        <a
+                            [routerLink]="item.url"
+                            title="{{ item.label }}"
+                        >
+                                <i
+                                    class="pi"
+                                    [ngClass]="'pi-' + item.icon"
+                                ></i>
+                        </a>
+                    </div>
+                    <div routerLinkActive="active-link" *ngIf="!item.homelink && !item.external">
                     <a
-                        *ngIf="item.homelink && !item.external"
                         [routerLink]="item.url"
                         title="{{ item.label }}"
                     >
-                        <i
-                            [class.active-link]="isActiveHomeLink"
-                            class="pi"
-                            [ngClass]="'pi-' + item.icon"
-                        ></i>
+                            <i
+                                class="pi"
+                                [ngClass]="'pi-' + item.icon"
+                            ></i>
                     </a>
-                    <a
-                        *ngIf="!item.homelink && !item.external"
-                        [routerLink]="item.url"
-                        title="{{ item.label }}"
-                    >
-                        <i
-                            routerLinkActive="active-link" 
-                            class="pi"
-                            [ngClass]="'pi-' + item.icon"
-                        ></i>
-                    </a>
-                    <a
-                        *ngIf="item.external"
-                        [href]="item.url"
-                        title="{{ item.label }}"
-                        target="_blank"
-                    >
-                        <i class="pi" [ngClass]="'pi-' + item.icon"></i>
-                    </a>
+                    </div>
+                    <div *ngIf="item.external">
+                        <a
+                            [href]="item.url"
+                            title="{{ item.label }}"
+                            target="_blank"
+                        >
+                                <i class="pi" [ngClass]="'pi-' + item.icon"></i>
+                        </a>
+                    </div>
                 </ng-template>
             </p-dock>
         </div>
