@@ -7,8 +7,7 @@ html {
 }
 
 body {
-    background-image: linear-gradient(to bottom, var(--cyan-100), var(--cyan-200));
-    min-height: 100%;
+    background-image: linear-gradient(to bottom, var(--cyan-50), var(--cyan-100));
 }
 
 .navbar {
@@ -35,7 +34,7 @@ body {
 }
 
 .p-timeline .p-timeline-event-connector {
-    background-color: var(--teal-400);
+    background-color: var(--teal-500);
 }
 
 .p-timeline .p-timeline-event-marker {

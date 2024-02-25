@@ -2,7 +2,7 @@
     <!-- Panel header -->
     <ng-template pTemplate="header">
         <div class="flex align-items-center gap-2">
-            <span class="font-bold">Gallery</span>
+            <span class="header-text">Gallery</span>
         </div>
     </ng-template>
     <ng-template pTemplate="icons">
@@ -12,12 +12,14 @@
         <p-menu #menu id="config_menu" [model]="items" [popup]="true" />
     </ng-template>
     <!-- Panel footer (paginator) -->
-    <ng-template pTemplate="footer">
+    <ng-template *ngIf="totalGalleries > rows" pTemplate="footer">
         <p-paginator [first]="first" [rows]="4" [totalRecords]="totalGalleries" (onPageChange)="onPageChange($event)"></p-paginator>
     </ng-template>
     <!-- Panel content -->
-    <p class="m-0">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
+    <div class="gallery-container">
+        <p class="m-0">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+    </div>
 </p-panel>

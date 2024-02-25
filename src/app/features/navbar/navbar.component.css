@@ -31,10 +31,13 @@ a .pi {
 
 a:hover .pi {
     animation: rotate-icon 0.7s ease forwards;
-    color: var(--orange-400);
-    filter: drop-shadow(0 0 3px rgba(103, 150, 154, 0.75));
+    color: var(--yellow-500);
+    filter: drop-shadow(0 0 3px rgba(207, 180, 82, 0.7));
 }
 
 .active-link {
-    color: var(--cyan-400) !important;
+    color: var(--teal-500) !important;
+}
+a:hover .active-link {
+    filter: drop-shadow(0 0 3px rgba(73, 142, 117, 0.7)) !important;
 }

@@ -3,7 +3,7 @@
     <!-- Panel header -->
     <ng-template pTemplate="header">
         <div class="flex align-items-center gap-2">
-            <span class="font-bold">Travel posts</span>
+            <span class="header-text">Travel posts</span>
         </div>
     </ng-template>
     <ng-template pTemplate="icons">
@@ -13,7 +13,7 @@
         <p-menu #menu id="config_menu" [model]="items" [popup]="true" />
     </ng-template>
     <!-- Panel footer (paginator) -->
-    <ng-template pTemplate="footer">
+    <ng-template *ngIf="totalPosts > rows" pTemplate="footer">
         <p-paginator [first]="first" [rows]="4" [totalRecords]="totalPosts" (onPageChange)="onPageChange($event)"></p-paginator>
     </ng-template>
     <!-- Panel content -->

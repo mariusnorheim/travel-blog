@@ -1,5 +1,5 @@
-<div class="card flex flex-column gap-3">
-    <p-timeline [value]="years" layout="horizontal" align="bottom">
+<div class="timeline-container flex flex-column gap-3">
+    <p-timeline [value]="years" layout="horizontal" align="top">
         <ng-template pTemplate="content" let-year>
             <div class="timeline-text">{{ year }}</div>
             <!-- <p-button [label]="year" icon="pi"></p-button> -->
@@ -7,12 +7,11 @@
     </p-timeline>
 </div>
 
-
 <p-panel [toggleable]="false">
     <!-- Panel header -->
     <ng-template pTemplate="header">
         <div class="flex align-items-center gap-2">
-            <span class="font-bold">Destinations</span>
+            <span class="header-text">Destinations</span>
         </div>
     </ng-template>
     <ng-template pTemplate="icons">
@@ -22,7 +21,7 @@
         <p-menu #menu id="config_menu" [model]="items" [popup]="true" />
     </ng-template>
     <!-- Panel footer (paginator) -->
-    <ng-template pTemplate="footer">
+    <ng-template *ngIf="totalDestinations > rows" pTemplate="footer">
         <p-paginator [first]="first" [rows]="4" [totalRecords]="totalDestinations" (onPageChange)="onPageChange($event)"></p-paginator>
     </ng-template>
     <!-- Panel content -->
@@ -47,7 +46,6 @@
                 </p-card>
             </div>
         </p-tabPanel>
-    
         <!-- Tab: Interactive Map (empty for now) -->
         <p-tabPanel header="Interactive Map">
         </p-tabPanel>
