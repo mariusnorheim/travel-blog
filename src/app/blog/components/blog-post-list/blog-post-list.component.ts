@@ -15,6 +15,7 @@ export class BlogPostListComponent implements OnInit {
     first: number = 0;
     rows: number = 4;
     totalPosts: number = 2;
+    items: { label?: string; icon?: string; separator?: boolean }[] = [];
 
     constructor(private blogService: BlogService) {}
 
@@ -24,6 +25,24 @@ export class BlogPostListComponent implements OnInit {
         console.log(this.totalPosts);
         this.first = 0;
         this.rows = 4;
+
+        this.items = [
+            {
+                label: 'Refresh',
+                icon: 'pi pi-refresh'
+            },
+            {
+                label: 'Search',
+                icon: 'pi pi-search'
+            },
+            {
+                separator: true
+            },
+            {
+                label: 'Delete',
+                icon: 'pi pi-times'
+            }
+        ];
     }
 
     private loadBlogPosts(): void {
