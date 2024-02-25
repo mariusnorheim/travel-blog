@@ -31,15 +31,16 @@ export class NavbarComponent implements OnInit, OnDestroy {
     items: MenuItem[] | undefined;
     isActiveHomeLink = false;
     private routerSub: Subscription;
-  
+
+    // sub to activatedRoute and include /blog/* routes to the home link
     constructor(private router: Router, private activatedRoute: ActivatedRoute) {
-      this.routerSub = this.router.events.pipe(
-        filter(event => event instanceof NavigationEnd),
-        map(() => this.activatedRoute)
-      ).subscribe(() => {
-        const currentRoute = this.router.url;
-        this.isActiveHomeLink = currentRoute === '/' || currentRoute.startsWith('/blog/');
-      });
+        this.routerSub = this.router.events.pipe(
+            filter(event => event instanceof NavigationEnd),
+            map(() => this.activatedRoute)
+        ).subscribe(() => {
+            const currentRoute = this.router.url;
+            this.isActiveHomeLink = currentRoute === '/' || currentRoute.startsWith('/blog/');
+        });
     }
 
     ngOnInit() {
