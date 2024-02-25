@@ -1,0 +1,25 @@
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1em;
+}
+
+.gallery-container p-gallery {
+    flex: 1 1 100%;
+    max-width: calc(50% - 1rem);
+}
+
+.gallery:last-child {
+    margin-bottom: 1rem;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .gallery-container p-gallery {
+        max-width: 100%; /* Full width on smaller screens */
+    }
+}
