@@ -22,8 +22,9 @@ export class GalleryService {
         {
             id: 1,
             title: 'Sample gallery 1',
-            location: 'Phuket, Thailand',
-            date: new Date(),
+            city: 'Phuket',
+            country: 'Thailand',
+            year: new Date(),
             images: [
                 {
                     text: 'text1',
@@ -42,8 +43,9 @@ export class GalleryService {
         {
             id: 2,
             title: 'Sample gallery 2',
-            location: 'Krabi, Thailand',
-            date: new Date(),
+            city: 'Krabi',
+            country: 'Thailand',
+            year: new Date(),
             images: [
                 {
                     text: 'text1',
