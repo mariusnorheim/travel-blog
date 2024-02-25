@@ -26,6 +26,10 @@ body {
     padding-top: 0;
 }
 
+/* .navbar .p-dock-item {
+    padding: 0;
+} */
+
 .p-toolbar {
     padding: 0.75rem;
 }

@@ -20,6 +20,10 @@
     margin-bottom: 1rem;
 }
 
+.font-bold {
+    font-weight: bold;
+}
+
 @media (max-width: 768px) {
     .card-container p-card {
         max-width: 100%;
