@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { BlogRoutingModule } from './blog-routing.module';
 import { BlogService } from './blog.service';
-import { BlogPostDetailsComponent } from './blog-post-details/blog-post-details.component';
-import { BlogPostListComponent } from './blog-post-list/blog-post-list.component';
+import { BlogPostDetailsComponent } from './components/blog-post-details/blog-post-details.component';
+import { BlogPostListComponent } from './components/blog-post-list/blog-post-list.component';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { MenuModule } from 'primeng/menu';
