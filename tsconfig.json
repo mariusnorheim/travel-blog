@@ -29,6 +29,7 @@
       "@models/*": ["src/app/models/*"],
       "@blog/*": ["src/app/blog/*"],
       "@gallery/*": ["src/app/gallery/*"],
+      "@destinations/*": ["src/app/destinations/*"]
     }
   },
   "angularCompilerOptions": {

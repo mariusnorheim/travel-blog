@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "travel-blog-angular:build:production"
+              "buildTarget": "travel-blog:build:production"
             },
             "development": {
-              "buildTarget": "travel-blog-angular:build:development"
+              "buildTarget": "travel-blog:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "travel-blog-angular:build"
+            "buildTarget": "travel-blog:build"
           }
         },
         "test": {

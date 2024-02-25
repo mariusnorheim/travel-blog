@@ -12,7 +12,13 @@ export const routes: Routes = [
         loadChildren: () =>
             import('./gallery/gallery.module').then((m) => m.GalleryModule),
     },
-    //{ path: 'destinations', loadChildren: () => import('./destination/destination.module').then(m => m.DestinationModule) },
+    {
+        path: 'destinations',
+        loadChildren: () =>
+            import('./destinations/destinations.module').then(
+                (m) => m.DestinationsModule,
+            ),
+    },
 ];
 
 @NgModule({

@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-//import { GalleryListComponent } from './components/gallery-list/gallery-list.component';
+import { DestinationsListComponent } from './components/destinations-list/destinations-list.component';
 //import { GalleryDetailsComponent } from './blog-post-details/blog-post-details.component';
 
 const routes: Routes = [
-    //{ path: '', component: GalleryListComponent }, // Route for gallery list
-    //{ path: ':id', component: GalleryDetailsComponent }, // Route for gallery details
+    { path: '', component: DestinationsListComponent }, // Route for destinations list
+    //{ path: ':id', component: DestinationsDetailsComponent }, // Route for destinations details
 ];
 
 @NgModule({

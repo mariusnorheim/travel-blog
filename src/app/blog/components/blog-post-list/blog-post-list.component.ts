@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { BlogPost } from '../../../models/blog-post.model';
-import { BlogService } from '../../blog.service';
+import { BlogPost } from '@models/blog-post.model';
+import { BlogService } from '@blog/blog.service';
 
 import { CardModule } from 'primeng/card';
 import { PaginatorState } from 'primeng/paginator';

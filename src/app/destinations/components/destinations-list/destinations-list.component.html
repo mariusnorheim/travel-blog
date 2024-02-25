@@ -1,1 +1,38 @@
-<p>destinations-list works!</p>
+<!-- Horizontal Timeline -->
+<div class="card flex flex-column gap-3">
+    <p-timeline [value]="years" layout="horizontal" align="bottom">
+        <ng-template pTemplate="content" let-year>
+            <div class="timeline-text">{{ year }}</div>
+            <!-- <p-button [label]="year" icon="pi"></p-button> -->
+        </ng-template>
+    </p-timeline>
+</div>
+
+<!-- TabView Component -->
+<p-tabView>
+    <!-- First Tab: Destinations List -->
+    <p-tabPanel header="Destinations">
+        <div class="card-container">
+            <!-- Small card component for each destination -->
+            <p-card class="card" [header]="destination.city" [subheader]="destination.country" *ngFor="let destination of destinations">
+                <ng-template pTemplate="header">
+                    <img alt="Card" src="https://primefaces.org/cdn/primeng/images/usercard.png" />
+                </ng-template>
+                <h4>Visited in {{ destination.year }}</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque
+                    quas!
+                </p>
+                <ng-template pTemplate="footer">
+                    <p-button label="Save" icon="pi pi-check"></p-button>
+                    <p-button label="Cancel" icon="pi pi-times" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>
+                </ng-template>
+            </p-card>
+        </div>
+    </p-tabPanel>
+
+    <!-- Second Tab: Interactive Map (empty for now) -->
+    <p-tabPanel header="Interactive Map">
+        <!-- Content for the interactive map will go here -->
+    </p-tabPanel>
+</p-tabView>
