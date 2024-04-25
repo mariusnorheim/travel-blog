@@ -13,6 +13,8 @@ export class GalleryListComponent implements OnInit {
     rows: number = 3;
     totalGalleries: number = 2;
     items: { label?: string; icon?: string; separator?: boolean }[] = [];
+    images: any[] | undefined;
+    responsiveOptions: any[] | undefined;
 
     constructor(private route: ActivatedRoute) {}
 
@@ -32,6 +34,31 @@ export class GalleryListComponent implements OnInit {
             {
                 label: 'Delete',
                 icon: 'pi pi-times'
+            }
+        ];
+
+        this.responsiveOptions = [
+            {
+                breakpoint: '1024px',
+                numVisible: 5
+            },
+            {
+                breakpoint: '768px',
+                numVisible: 3
+            },
+            {
+                breakpoint: '560px',
+                numVisible: 1
+            }
+        ];
+
+        //this.photoService.getImages().then((images) => (this.images = images));
+        this.images = [
+            {
+                itemImageSrc: 'https://primeng.org/images/galleria/galleria1.jpg',
+                thumbnailImageSrc: 'https://primeng.org/images/galleria/galleria1s.jpg',
+                alt: 'Description for Image 1',
+                title: 'Title 1'
             }
         ];
     }
