@@ -1,4 +1,4 @@
-export interface Gallery {
+export type Gallery = {
     id: number;
     title: string;
     city: string;
