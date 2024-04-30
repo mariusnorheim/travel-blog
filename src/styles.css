@@ -10,6 +10,35 @@ body {
     background-image: linear-gradient(to bottom, var(--surface-500), var(--bluegray-900));
 }
 
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.responsive-container {
+    flex-grow: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1280px) {
+    .p-toolbar-group-end {
+        display: none;
+    }
+    .p-toolbar-group-start h1 {
+        display: none;
+    }
+}
+
 .navbar {
     background-image: linear-gradient(30deg, var(--indigo-300), var(--indigo-500));
     border: 1px solid var(--gray-600);

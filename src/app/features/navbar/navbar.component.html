@@ -1,15 +1,16 @@
 <p-toolbar styleClass="navbar">
-    <ng-template pTemplate="start">
-        <div>
-            <a [routerLink]="['/']">
-                <img class="nav-icon" src="../assets/images/sunflower.png" />
-            </a>
+    <div class="responsive-container nav">
+        <div class="p-toolbar-group-start">
+            <div>
+                <a [routerLink]="['/']">
+                    <img class="nav-icon" src="../assets/images/sunflower.png" />
+                </a>
+            </div>
+            <h1>mariusinbloom</h1>
         </div>
-        <h1>mariusinbloom</h1>
-    </ng-template>
-    <ng-template pTemplate="center">
-        <div class="flex flex-wrap align-items-center gap-3">
-            <div class="nav-items">
+
+        <div class="p-toolbar-group-center">
+            <div class="flex flex-wrap align-items-center gap-3 nav-items">
                 <button class="p-link inline-flex justify-content-center align-items-center" [class.active-link]="isActiveHomeLink">
                     <a [routerLink]="['/']" title="Blog">
                         <i class="pi pi-fw pi-book text-2xl"></i>
@@ -36,13 +37,5 @@
                 </button>
             </div>
         </div>
-    </ng-template>
-    <ng-template pTemplate="end">
-        <div class="p-inputgroup">
-            <input type="text" pInputText placeholder="Search" />
-            <span class="p-inputgroup-addon">
-                <i class="pi pi-search"></i>
-            </span>
-        </div>
-    </ng-template>
+    </div>
 </p-toolbar>
