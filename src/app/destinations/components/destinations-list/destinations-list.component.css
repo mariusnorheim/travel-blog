@@ -7,13 +7,12 @@
 
 .timeline-container {
     animation: fadeIn 0.8s ease;
-    border: 1px solid #e5e9f0;
-    padding: 0.5rem 1rem 0.5rem 1.4rem;
+    border: 1px solid var(--gray-600);
+    border-radius: 5px;
     background: #ffffff;
     color: #4c566a;
-    border-top-right-radius: 4px;
-    border-top-left-radius: 4px;
     margin-bottom: 1rem;
+    padding: 0.5rem 1rem 0.5rem 1.4rem;
 }
 
 .timeline-text {
@@ -45,7 +44,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 1em;
+    gap: 1rem;
 }
 
 .card-container p-card {

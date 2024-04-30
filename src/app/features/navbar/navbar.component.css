@@ -12,32 +12,77 @@
 }
 
 h1 {
-    color: var(--purple-800);
+    color: var(--yellow-400);
     font-family: "Vegan Style Personal Use", sans-serif;
+    font-size: 2rem;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     margin: 0;
     padding: 0;
     padding-left: 0.5rem;
 }
 
-p-dock .pi {
-    font-size: 3rem;
-    font-weight: bold;
+.nav-icon {
+    height: 3.5rem;
+    width: 3.5rem;
 }
 
-a .pi {
-    color: var(--teal-400);
-    text-shadow: 1px 1px var(--gray-600);
+.nav-link {
+    background: var(--gray-500);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+}
+.active-link .nav-link {
+    background: var(--bluegray-800);
+}
+.nav-link:hover {
+    background: var(--bluegray-800);
 }
 
-a:hover .pi {
-    animation: rotate-icon 0.7s ease forwards;
-    color: var(--yellow-500);
-    filter: drop-shadow(0 0 3px rgba(207, 180, 82, 0.7));
+.nav-items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    transition: all 0.3s ease;
 }
 
-.active-link i {
-    color: var(--teal-500) !important;
+.nav-items a {
+    color: #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    gap: 0.5rem;
+    padding: 0 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
-a:hover .active-link {
-    filter: drop-shadow(0 0 3px rgba(73, 142, 117, 0.7)) !important;
+
+.nav-items .pi {
+    color: var(--teal-500);
+    font-size: 2rem;
+    font-weight: 700;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    transition: all 0.3s ease;
 }
+
+.nav-items a:hover {
+    color: #f1f5f9;
+}
+
+.nav-items .pi:hover {
+    animation: rotate-icon 0.6s ease forwards;
+    color: var(--teal-600);
+    filter: drop-shadow(0 0 2px rgba(0, 0, 38, 0.4));
+}
+
+.nav-items .pi:active, .nav-items a:active {
+    color: var(--yellow-500) !important;
+}
+
+.active-link a, .active-link i, .active-link i:hover {
+    color: #f1f5f9 !important;
+}
+

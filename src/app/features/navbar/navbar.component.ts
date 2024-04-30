@@ -27,8 +27,7 @@ import { filter, map } from 'rxjs/operators';
     templateUrl: './navbar.component.html',
     styleUrls: ['./navbar.component.css'],
 })
-export class NavbarComponent implements OnInit, OnDestroy {
-    items: MenuItem[] | undefined;
+export class NavbarComponent implements OnDestroy {
     isActiveHomeLink = false;
     private routerSub: Subscription;
 
@@ -41,39 +40,6 @@ export class NavbarComponent implements OnInit, OnDestroy {
             const currentRoute = this.router.url;
             this.isActiveHomeLink = currentRoute === '/' || currentRoute.startsWith('/blog/');
         });
-    }
-
-    ngOnInit() {
-        this.items = [
-            {
-                label: 'Blog',
-                icon: 'pi-fw pi-book',
-                url: '/',
-                homelink: true,
-                external: false
-            },
-            {
-                label: 'Gallery',
-                icon: 'pi-fw pi-image',
-                url: '/gallery',
-                homelink: false,
-                external: false
-            },
-            {
-                label: 'Destinations',
-                icon: 'pi-fw pi-globe',
-                url: '/destinations',
-                homelink: false,
-                external: false
-            },
-            {
-                label: 'Instagram',
-                icon: 'pi-fw pi-instagram',
-                url: 'https://www.instagram.com/mariusinbloom',
-                homelink: false,
-                external: true
-            }
-        ];
     }
 
     ngOnDestroy() {
