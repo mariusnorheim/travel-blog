@@ -11,30 +11,27 @@
 
         <div class="p-toolbar-group-center">
             <div class="flex flex-wrap align-items-center gap-3 nav-items">
-                <button class="p-link inline-flex justify-content-center align-items-center" [class.active-link]="isActiveHomeLink">
-                    <a [routerLink]="['/']" title="Blog">
+
+                    <a [routerLink]="['/']" title="Blog" class="p-link inline-flex justify-content-center align-items-center" [class.active-link]="isActiveHomeLink">
                         <i class="pi pi-fw pi-book text-2xl"></i>
-                        <div class="nav-link">Blog</div>
+                        <div class="p-link nav-link">Blog</div>
                     </a>
-                </button>
-                <button class="p-link inline-flex justify-content-center align-items-center" routerLinkActive="active-link">
-                    <a [routerLink]="['/gallery']" title="Gallery">
-                        <i class="pi pi-fw pi-image text-2xl" [class.active-link]="isActiveHomeLink"></i>
-                        <div class="nav-link">Gallery</div>
-                    </a>
-                </button>
-                <button class="p-link justify-content-center align-items-center" routerLinkActive="active-link">
-                    <a [routerLink]="['/destinations']" title="Destinations">
+
+
+                    <a [routerLink]="['/destinations']" title="Destinations" class="p-link inline-flex justify-content-center align-items-center" routerLinkActive="active-link">
                         <i class="pi pi-fw pi-globe text-2xl" [class.active-link]="isActiveHomeLink"></i>
                         <div class="nav-link">Destinations</div>
                     </a>
-                </button>
-                <button class="p-link inline-flex justify-content-center align-items-center">
-                    <a href="https://www.instagram.com/mariusinbloom" target="_blank">
-                        <i class="pi pi-fw pi-instagram text-2xl" title="Instagram"></i>
+
+                    <a [routerLink]="['/gallery']" title="Gallery" class="p-link inline-flex justify-content-center align-items-center" routerLinkActive="active-link">
+                        <i class="pi pi-fw pi-image text-2xl" [class.active-link]="isActiveHomeLink"></i>
+                        <div class="nav-link">Gallery</div>
+                    </a>
+
+                    <a href="https://www.instagram.com/mariusinbloom"  target="_blank" title="Instagram" class="p-link inline-flex justify-content-center align-items-center">
+                        <i class="pi pi-fw pi-instagram text-2xl"></i>
                         <div class="nav-link">Instagram</div>
                     </a>
-                </button>
             </div>
         </div>
     </div>

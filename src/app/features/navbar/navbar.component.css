@@ -15,9 +15,10 @@ h1 {
     color: var(--yellow-400);
     font-family: "Vegan Style Personal Use", sans-serif;
     font-size: 2rem;
+    font-weight: 700;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     margin: 0;
-    padding: 0 0.5rem;
+    padding: 0 0.25rem;
 }
 
 .nav {
@@ -25,7 +26,7 @@ h1 {
     flex-direction: row;
     align-items: center;
     justify-items: center;
-    padding: 0;
+    padding: 0 1rem;
 }
 
 .nav-icon {
@@ -37,8 +38,10 @@ h1 {
     background: var(--gray-500);
     font-size: 1rem;
     font-weight: 500;
-    padding: 0.5rem 1rem;
-    border-radius: 0.25rem;
+    min-width: 6.5rem;
+    text-align: center;
+    padding: 0.5rem 2rem;
+    border-radius: 0.4rem;
 }
 .active-link .nav-link {
     background: var(--bluegray-800);
@@ -48,8 +51,11 @@ h1 {
 }
 
 .nav-items {
+    display: flex;
+    flex-direction: row;
     transition: all 0.3s ease;
-    padding: 0 6.5rem;
+    gap: 1rem;
+    padding: 0 4rem;
 }
 
 .nav-items a {
@@ -57,8 +63,9 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-items: center;
     gap: 0.5rem;
-    padding: 0 1rem;
+    padding: 0;
     text-decoration: none;
     transition: all 0.3s ease;
 }
