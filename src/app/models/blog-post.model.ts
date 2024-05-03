@@ -3,5 +3,8 @@ export type BlogPost = {
     title: string;
     content: string;
     date: Date | string;
-    image?: string;
+    lastModified: Date | string;
+    imageId: number;
+    userId: number;
+    destinationId: number;
 }
