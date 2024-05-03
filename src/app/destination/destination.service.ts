@@ -7,7 +7,7 @@ import { Destination } from '@models/destination.model';
 @Injectable({
     providedIn: 'root',
 })
-export class DestinationsService {
+export class DestinationService {
     constructor() {}
 
     private getStandardOptions(): any {

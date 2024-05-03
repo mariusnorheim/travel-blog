@@ -4,23 +4,28 @@ import { RouterOutlet } from '@angular/router';
 import { PrimeNGConfig } from 'primeng/api';
 
 import { NavbarComponent } from './features/navbar/navbar.component';
-import { BlogModule } from './blog/blog.module';
-import { BlogPost } from './models/blog-post.model';
+import { PostModule } from './post/post.module';
 import { GalleryModule } from './gallery/gallery.module';
-//import { BlogService } from './blog/blog.service';
+//import { PostService } from './posts/posts.service';
 
 @Component({
     selector: 'travel-blog',
     standalone: true,
-    imports: [CommonModule, RouterOutlet, BlogModule, GalleryModule, NavbarComponent],
+    imports: [
+        CommonModule,
+        RouterOutlet,
+        PostModule,
+        GalleryModule,
+        NavbarComponent,
+    ],
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
 })
 export class AppComponent implements OnInit {
-    // items!: BlogPost[];
-    // constructor(private blogService: BlogService) {}
+    // items!: Post[];
+    // constructor(private postsService: PostService) {}
     // ngOnInit(): void {
-    //     this.blogService.getPosts().subscribe(
+    //     this.postService.getPosts().subscribe(
     //         (data: any) => {
     //             this.items = data;
     //         },
@@ -31,7 +36,7 @@ export class AppComponent implements OnInit {
     // }
 
     constructor(private primengConfig: PrimeNGConfig) {}
-    
+
     ngOnInit() {
         this.primengConfig.ripple = true;
     }

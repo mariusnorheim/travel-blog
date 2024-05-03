@@ -1,27 +1,26 @@
 import { Component, OnInit } from '@angular/core';
-import { BlogPost } from '@models/blog-post.model';
-import { BlogService } from '@blog/blog.service';
+import { Post } from '@models/post.model';
+import { PostService } from '@post/post.service';
 
-import { CardModule } from 'primeng/card';
 import { PaginatorState } from 'primeng/paginator';
 
 @Component({
-    selector: 'blog-post-list',
-    templateUrl: './blog-post-list.component.html',
-    styleUrls: ['./blog-post-list.component.css'],
+    selector: 'post-list',
+    templateUrl: './post-list.component.html',
+    styleUrls: ['./post-list.component.css'],
 })
-export class BlogPostListComponent implements OnInit {
-    blogPosts: BlogPost[] = [];
+export class PostListComponent implements OnInit {
+    posts: Post[] = [];
     first: number = 0;
     rows: number = 4;
     totalPosts: number = 2;
     items: { label?: string; icon?: string; separator?: boolean }[] = [];
 
-    constructor(private blogService: BlogService) {}
+    constructor(private postService: PostService) {}
 
     ngOnInit(): void {
-        this.loadBlogPosts();
-        // this.totalPosts = this.blogPosts.length || 0;
+        this.loadPosts();
+        // this.totalPosts = this.posts.length || 0;
         console.log(this.totalPosts);
         this.first = 0;
         this.rows = 4;
@@ -45,9 +44,9 @@ export class BlogPostListComponent implements OnInit {
         ];
     }
 
-    private loadBlogPosts(): void {
-        this.blogService.getPosts().subscribe((posts) => {
-            this.blogPosts = posts;
+    private loadPosts(): void {
+        this.postService.getPosts().subscribe((posts) => {
+            this.posts = posts;
         });
     }
 

@@ -18,7 +18,7 @@
     </ng-template>
     <!-- Panel content -->
     <div class="card-container">
-        <p-card class="card" [header]="post.title" *ngFor="let post of blogPosts">
+        <p-card class="card" [header]="post.title" *ngFor="let post of posts">
             <ng-template pTemplate="header">
                 <img [alt]="post.title" src="https://primefaces.org/cdn/primeng/images/usercard.png" />
             </ng-template>

@@ -5,7 +5,7 @@ export const routes: Routes = [
     {
         path: '',
         loadChildren: () =>
-            import('./blog/blog.module').then((m) => m.BlogModule),
+            import('./post/post.module').then((m) => m.PostModule),
     },
     {
         path: 'gallery',
@@ -15,9 +15,7 @@ export const routes: Routes = [
     {
         path: 'destinations',
         loadChildren: () =>
-            import('./destinations/destinations.module').then(
-                (m) => m.DestinationsModule,
-            ),
+            import('./destination/destination.module').then((m) => m.DestinationModule),
     },
 ];
 

@@ -8,7 +8,6 @@ import { ButtonModule } from 'primeng/button';
 import { DockModule } from 'primeng/dock';
 import { InputTextModule } from 'primeng/inputtext';
 import { ToolbarModule } from 'primeng/toolbar';
-import { MenuItem } from 'primeng/api';
 
 import { Subscription } from 'rxjs';
 import { filter, map } from 'rxjs/operators';
@@ -39,7 +38,7 @@ export class NavbarComponent implements OnDestroy {
             map(() => this.activatedRoute)
         ).subscribe(() => {
             const currentRoute = this.router.url;
-            this.isActiveHomeLink = currentRoute === '/' || currentRoute.startsWith('/blog/');
+            this.isActiveHomeLink = currentRoute === '/' || currentRoute.startsWith('/post/');
         });
     }
 

@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-import { BlogPost } from '@models/blog-post.model';
+import { Post } from '@models/post.model';
 
 @Injectable({
     providedIn: 'root',
 })
-export class BlogService {
+export class PostService {
     //constructor(private http: HttpClient) {}
     constructor() {}
 
@@ -18,7 +18,7 @@ export class BlogService {
         };
     }
 
-    private blogPosts: BlogPost[] = [
+    private posts: Post[] = [
         // Sample data
         {
             id: 1,
@@ -43,7 +43,7 @@ export class BlogService {
         // Add more posts here
     ];
 
-    getPosts(): Observable<BlogPost[]> {
+    getPosts(): Observable<Post[]> {
         //let options = this.getStandardOptions();
         // options.params = new HttpParams({
         //     fromObject: {
@@ -55,7 +55,7 @@ export class BlogService {
 
         // This example uses 'of' to return an observable of the sample data
         // In a real application, you'd make an HTTP request to fetch posts
-        return of(this.blogPosts);
+        return of(this.posts);
     }
 
     // getPost(id: number): BlogPost {

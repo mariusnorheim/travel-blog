@@ -5,14 +5,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { BlogService } from './blog/blog.service';
+import { PostService } from './post/post.service';
 // ... other core services
 
 @NgModule({
-    imports: [CommonModule, AppRoutingModule, AppComponent, BrowserModule, BrowserAnimationsModule],
+    imports: [
+        CommonModule,
+        AppRoutingModule,
+        AppComponent,
+        BrowserModule,
+        BrowserAnimationsModule,
+    ],
     declarations: [],
     providers: [
-        //BlogService,
+        //PostService,
         // ... other services
     ],
     bootstrap: [],

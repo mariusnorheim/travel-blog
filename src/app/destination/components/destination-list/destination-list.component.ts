@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
 
 import { Destination } from '@models/destination.model';
-import { DestinationsService } from '@destinations/destinations.service';
+import { DestinationService } from '@destination/destination.service';
 import { PaginatorState } from 'primeng/paginator';
 
 @Component({
-    selector: 'app-destinations-list',
-    templateUrl: './destinations-list.component.html',
-    styleUrl: './destinations-list.component.css',
+    selector: 'app-destination-list',
+    templateUrl: './destination-list.component.html',
+    styleUrl: './destination-list.component.css',
 })
-export class DestinationsListComponent {
+export class DestinationListComponent {
     destinations: Destination[] = [];
     years: string[] = this.uniqueYears;
     first: number = 0;
@@ -17,7 +17,7 @@ export class DestinationsListComponent {
     totalDestinations: number = 4;
     items: { label?: string; icon?: string; separator?: boolean }[] = [];
 
-    constructor(private destinationsService: DestinationsService) {}
+    constructor(private destinationService: DestinationService) {}
 
     ngOnInit(): void {
         this.loadDestinations();
@@ -47,7 +47,7 @@ export class DestinationsListComponent {
     }
 
     private loadDestinations(): void {
-        this.destinationsService.getDestinations().subscribe((destinations) => {
+        this.destinationService.getDestinations().subscribe((destinations) => {
             this.destinations = destinations;
         });
     }

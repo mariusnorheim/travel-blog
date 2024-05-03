@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { PaginatorState } from 'primeng/paginator';
 
 @Component({
-  selector: 'app-gallery-list',
+  selector: 'gallery-list',
   templateUrl: './gallery-list.component.html',
   styleUrl: './gallery-list.component.css'
 })

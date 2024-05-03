@@ -1,16 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { ButtonModule } from 'primeng/button';
-import { MenuModule } from 'primeng/menu';
-import { PanelModule } from 'primeng/panel';
-
 @Component({
-    selector: 'blog-post-details',
-    templateUrl: './blog-post-details.component.html',
-    styleUrl: './blog-post-details.component.css',
+    selector: 'post-details',
+    templateUrl: './post-details.component.html',
+    styleUrl: './post-details.component.css',
 })
-export class BlogPostDetailsComponent implements OnInit {
+export class PostDetailsComponent implements OnInit {
     postId!: number;
     items: { label?: string; icon?: string; separator?: boolean }[] = [];
 
