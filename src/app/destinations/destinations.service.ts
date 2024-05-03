@@ -25,32 +25,24 @@ export class DestinationsService {
             city: 'Phuket',
             country: 'Thailand',
             year: new Date('2022-11-04'),
-            galleryId: [1],
-            blogId: [1,2]
         },
         {
             id: 2,
             city: 'Koh Samui',
             country: 'Thailand',
             year: new Date('2023-12-22'),
-            galleryId: [2],
-            blogId: [1,2]
         },
         {
             id: 3,
-            city: 'Ko Puh',
-            country: 'Thailand',
-            year: new Date('2023-12-11'),
-            galleryId: [2],
-            blogId: [1,2]
-        },
-        {
-            id: 4,
             city: 'Krabi',
             country: 'Thailand',
             year: new Date(),
-            galleryId: [2],
-            blogId: [1,2]
+        },
+        {
+            id: 4,
+            city: 'Ko Lanta',
+            country: 'Thailand',
+            year: new Date(),
         },
     ];
 

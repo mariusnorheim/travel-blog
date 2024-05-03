@@ -18,48 +18,19 @@ export class GalleryService {
     }
 
     private galleries: Gallery[] = [
-        // Sample data
         {
             id: 1,
-            title: 'Sample gallery 1',
-            city: 'Phuket',
-            country: 'Thailand',
-            year: new Date(),
-            images: [
-                {
-                    text: 'text1',
-                    src: 'image-url-1',
-                },
-                {
-                    text: 'text2',
-                    src: 'image-url-2',
-                },
-                {
-                    text: 'text2',
-                    src: 'image-url-2',
-                },
-            ]
+            name: 'Gallery 1',
+            date: new Date(),
+            lastModified: new Date(),
+            destinationId: 1,
         },
         {
             id: 2,
-            title: 'Sample gallery 2',
-            city: 'Krabi',
-            country: 'Thailand',
-            year: new Date(),
-            images: [
-                {
-                    text: 'text1',
-                    src: 'image-url-1',
-                },
-                {
-                    text: 'text2',
-                    src: 'image-url-2',
-                },
-                {
-                    text: 'text2',
-                    src: 'image-url-2',
-                },
-            ]
+            name: 'Gallery 2',
+            date: new Date(),
+            lastModified: new Date(),
+            destinationId: 2,
         },
     ];
 

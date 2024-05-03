@@ -25,13 +25,20 @@ export class BlogService {
             title: 'Sample Post 1',
             content: 'Text for sample post 1',
             date: new Date(),
-            image: 'image-url-1',
+            lastModified: new Date(),
+            imageId: 1,
+            userId: 1,
+            destinationId: 1
         },
         {
             id: 2,
             title: 'Sample Post 2',
             content: 'Text for sample post 2...',
             date: new Date(),
+            lastModified: new Date(),
+            imageId: 1,
+            userId: 1,
+            destinationId: 3
         },
         // Add more posts here
     ];
