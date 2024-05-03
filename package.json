@@ -3,10 +3,13 @@
   "version": "0.0.1",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node src/server/server.js",
+    "dev": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "postinstall": "ng build --prod",
+    "generate": "drizzle-kit generate:pg"
   },
   "private": true,
   "dependencies": {
@@ -18,10 +21,15 @@
     "@angular/platform-browser": "^17.0.0",
     "@angular/platform-browser-dynamic": "^17.0.0",
     "@angular/router": "^17.0.0",
+    "@vercel/postgres": "^0.8.0",
+    "cors": "^2.8.5",
+    "drizzle-orm": "^0.30.9",
+    "express": "^4.19.2",
     "primeicons": "^6.0.1",
     "primeng": "^17.7.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
+    "uploadthing": "^6.10.1",
     "zone.js": "~0.14.2"
   },
   "devDependencies": {
@@ -29,6 +37,7 @@
     "@angular/cli": "^17.0.9",
     "@angular/compiler-cli": "^17.0.0",
     "@types/jasmine": "~5.1.0",
+    "drizzle-kit": "^0.20.17",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
