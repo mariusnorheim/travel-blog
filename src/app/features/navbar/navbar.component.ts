@@ -32,6 +32,7 @@ export class NavbarComponent implements OnDestroy {
     private routerSub: Subscription;
 
     // sub to activatedRoute and include /blog/* routes to the home link
+    // needed to highlight the home link when on a blog page
     constructor(private router: Router, private activatedRoute: ActivatedRoute) {
         this.routerSub = this.router.events.pipe(
             filter(event => event instanceof NavigationEnd),
@@ -44,9 +45,5 @@ export class NavbarComponent implements OnDestroy {
 
     ngOnDestroy() {
         this.routerSub.unsubscribe();
-    }
-
-    navigateTo(link: string): void {
-        this.router.navigate([link]);
     }
 }

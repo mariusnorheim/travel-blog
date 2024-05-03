@@ -3,7 +3,7 @@
         <div class="p-toolbar-group-start">
             <div>
                 <a [routerLink]="['/']">
-                    <img class="nav-icon" src="../assets/images/sunflower.png" />
+                    <img class="nav-icon" src="../assets/images/sunflower.png" alt="Marius in bloom!"/>
                 </a>
             </div>
             <h1>mariusinbloom</h1>
@@ -11,27 +11,22 @@
 
         <div class="p-toolbar-group-center">
             <div class="flex flex-wrap align-items-center gap-3 nav-items">
-
-                    <a [routerLink]="['/']" title="Blog" class="p-link inline-flex justify-content-center align-items-center" [class.active-link]="isActiveHomeLink">
-                        <i class="pi pi-fw pi-book text-2xl"></i>
-                        <div class="p-link nav-link">Blog</div>
-                    </a>
-
-
-                    <a [routerLink]="['/destinations']" title="Destinations" class="p-link inline-flex justify-content-center align-items-center" routerLinkActive="active-link">
-                        <i class="pi pi-fw pi-globe text-2xl" [class.active-link]="isActiveHomeLink"></i>
-                        <div class="nav-link">Destinations</div>
-                    </a>
-
-                    <a [routerLink]="['/gallery']" title="Gallery" class="p-link inline-flex justify-content-center align-items-center" routerLinkActive="active-link">
-                        <i class="pi pi-fw pi-image text-2xl" [class.active-link]="isActiveHomeLink"></i>
-                        <div class="nav-link">Gallery</div>
-                    </a>
-
-                    <a href="https://www.instagram.com/mariusinbloom"  target="_blank" title="Instagram" class="p-link inline-flex justify-content-center align-items-center">
-                        <i class="pi pi-fw pi-instagram text-2xl"></i>
-                        <div class="nav-link">Instagram</div>
-                    </a>
+                <a [routerLink]="['/']" title="Blog" class="p-link inline-flex justify-content-center align-items-center" [class.active-link]="isActiveHomeLink">
+                    <i class="pi pi-fw pi-book text-2xl" alt="Blog menu icon"></i>
+                    <div class="nav-link">Blog</div>
+                </a>
+                <a [routerLink]="['/destinations']" title="Destinations" class="p-link inline-flex justify-content-center align-items-center" routerLinkActive="active-link">
+                    <i class="pi pi-fw pi-globe text-2xl" alt="Destinations menu icon" [class.active-link]="isActiveHomeLink"></i>
+                    <div class="nav-link">Destinations</div>
+                </a>
+                <a [routerLink]="['/gallery']" title="Gallery" class="p-link inline-flex justify-content-center align-items-center" routerLinkActive="active-link">
+                    <i class="pi pi-fw pi-image text-2xl" alt="Gallery menu icon" [class.active-link]="isActiveHomeLink"></i>
+                    <div class="nav-link">Gallery</div>
+                </a>
+                <a href="https://www.instagram.com/mariusinbloom"  target="_blank" title="Instagram" class="p-link inline-flex justify-content-center align-items-center">
+                    <i class="pi pi-fw pi-instagram text-2xl" alt="Instagram menu icon"></i>
+                    <div class="nav-link">Instagram</div>
+                </a>
             </div>
         </div>
     </div>
